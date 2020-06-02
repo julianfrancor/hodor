@@ -10,6 +10,7 @@ for i in range(4096):
                'key': response.cookies['HoldTheDoor']}
     cookies = {'HoldTheDoor': response.cookies['HoldTheDoor']}
     req = requests.post(host, payload, cookies=cookies)
+    print("vote: {} status: {}".format(i, response.status_code))
 
 """
 Notice that cookies is a environmental variable, so that is why
